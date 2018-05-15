@@ -10,6 +10,8 @@ spec:
       labels:
         app: nexus
     spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: preemptible-pool
       containers:
       - image: sonatype/nexus3
         imagePullPolicy: Always
